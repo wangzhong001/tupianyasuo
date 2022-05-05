@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_255">
+
+        <com.dueeeke.videoplayer.player.IjkVideoView
+            android:id="@+id/player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:background="?android:attr/actionBarItemBackground"
+            android:padding="@dimen/dp_15"
+            android:src="@drawable/back_icon_white"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请调整压缩大小"
+        android:textColor="#ff000000"
+        android:textSize="16sp"
+        />
+    <TextView
+        android:id="@+id/video_size"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="原始大小: 120M"
+        android:textColor="#ffa6a6a6"
+        android:textSize="14sp"
+        />
+    <SeekBar
+        android:layout_marginTop="@dimen/dp_53"
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:maxHeight="@dimen/dp_4"
+        android:minHeight="@dimen/dp_4"
+        android:splitTrack="false"
+        android:max="80"
+        android:min="0"
+        android:progress="60"
+        android:thumb="@drawable/thumb_image"
+        android:progressDrawable="@drawable/bg_adjust_seek_bar"
+        />
+
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="体积最小"
+            android:textColor="#ff000000"
+            android:textSize="13sp"
+            />
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="质量最佳"
+            android:textColor="#ff000000"
+            android:textSize="13sp"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/video_size1"
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="压缩后: 60M(50%)"
+        android:textColor="#ff000000"
+        android:textSize="16sp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_9"
+        android:background="@drawable/record_tv_bg"
+        android:gravity="center"
+        android:text="压缩并保存"
+        android:textColor="#ffffffff"
+        android:textSize="16sp" />
+</LinearLayout>

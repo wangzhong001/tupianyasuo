@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="baseViewModel"
+            type="com.qihe.imagecompression.viewmodel.FeaturesViewModel"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/more_feture_shape"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/diss_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:gravity="center">
+
+            <View
+                android:layout_width="@dimen/dp_33"
+                android:layout_height="@dimen/dp_5"
+                android:background="@drawable/open_shape" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="21.33dp"
+                android:paddingTop="8dp"
+                android:paddingRight="21.33dp"
+                android:paddingBottom="8dp"
+                android:text="取消"
+                android:textColor="#ff333333"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingLeft="21.33dp"
+                android:paddingTop="8dp"
+                android:paddingRight="21.33dp"
+                android:paddingBottom="8dp"
+                android:text="确定"
+                android:textColor="#ffff5134"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:background="?android:attr/selectableItemBackground"
+            android:id="@+id/layout_phone_ring"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="21.33dp"
+            android:paddingRight="21.33dp"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/iv_phone_ring"
+                android:layout_width="15.33dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/select_icon_cover"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:paddingTop="20.67dp"
+                android:paddingBottom="20.67dp"
+                android:text="手机铃声"
+                android:textColor="#ff333333"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:background="?android:attr/selectableItemBackground"
+            android:id="@+id/layout_notification_ring"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="21.33dp"
+            android:paddingRight="21.33dp"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/iv_notification_ring"
+                android:layout_width="15.33dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/select_icon"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:paddingTop="20.67dp"
+                android:paddingBottom="20.67dp"
+                android:text="通知铃声"
+                android:textColor="#ff333333"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:background="?android:attr/selectableItemBackground"
+            android:id="@+id/layout_alarm_ring"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="21.33dp"
+            android:paddingRight="21.33dp"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/iv_alarm_ring"
+                android:layout_width="15.33dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/select_icon"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:paddingTop="20.67dp"
+                android:paddingBottom="20.67dp"
+                android:text="闹钟铃声"
+                android:textColor="#ff333333"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,294 @@
+<resources>
+
+    <!-- require boolean value to decide whether requestFocus for view. -->
+    <attr name="requestFocus" format="boolean" />
+    <!-- require ItemView {@link me.tatarka.bindingcollectionadapter.ItemView} or ItemViewSelector {{@link me.tatarka.bindingcollectionadapter.ItemViewSelector}.} -->
+    <attr name="itemView" format="reference" />
+    <!-- require List<ViewModel> bind to ItemView to presentation.-->
+    <attr name="items" format="reference" />
+    <!-- require a adapter which type of BindingRecyclerViewAdapter<T> to AdapterView-->
+    <attr name="adapter" format="reference" />
+
+    <attr name="onScrollChangeCommand" format="reference" />
+    <attr name="onScrollStateChangedCommand" format="reference" />
+    <attr name="url" format="string" />
+    <attr name="setRuandImageUri" format="string" />
+
+    <attr name="onTouchCommand" format="reference" />
+
+    <!-- require BindingCommand {@link com.kelin.mvvmlight.command.BindingCommand } to deal with view click event. -->
+    <attr name="onClickCommand" format="reference" />
+    <attr name="onLongClickCommand" format="reference" />
+    <!-- require BindingCommand<Boolean> {@link com.kelin.mvvmlight.command.BindingCommand } to deal with view focus change event.
+     BindingCommand would has params which means if view hasFocus.-->
+    <attr name="onFocusChangeCommand" format="reference" />
+    <attr name="isThrottleFirst" format="boolean" />
+    <attr name="currentView" format="reference" />
+    <!-- require boolean value to decide whether requestFocus for view. -->
+    <declare-styleable name="View">
+        <!-- require BindingCommand {@link com.kelin.mvvmlight.command.BindingCommand } to deal with view click event. -->
+        <attr name="onClickCommand" />
+        <attr name="onLongClickCommand" />
+        <!-- require BindingCommand<Boolean> {@link com.kelin.mvvmlight.command.BindingCommand } to deal with view focus change event.
+         BindingCommand would has params which means if view hasFocus.-->
+        <attr name="onFocusChangeCommand" />
+        <!-- require BindingCommand<MotionEvent> -->
+        <attr name="onTouchCommand" />
+        <attr name="isThrottleFirst" />
+        <attr name="currentView" />
+
+    </declare-styleable>
+
+
+    <declare-styleable name="AdapterView">
+        <!-- require ItemView {@link me.tatarka.bindingcollectionadapter.ItemView} or ItemViewSelector {{@link me.tatarka.bindingcollectionadapter.ItemViewSelector}.} -->
+        <attr name="itemView" />
+        <!-- require List<ViewModel> bind to ItemView to presentation.-->
+        <attr name="items" />
+        <!-- require a adapter which type of BindingRecyclerViewAdapter<T> to AdapterView-->
+        <attr name="adapter" />
+        <attr name="dropDownItemView" format="reference" />
+        <attr name="itemIds" format="reference" />
+        <attr name="itemIsEnabled" format="reference" />
+        <!-- require BindingCommand<Integer> -->
+        <attr name="onScrollStateChangedCommand" />
+        <!-- require BindingCommand<ListViewScrollDataWrapper> -->
+        <attr name="onScrollChangeCommand" />
+        <!-- require BindingCommand<Integer> count of list items-->
+        <attr name="onLoadMoreCommand" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="TextView">
+        <!--require BindingCommand<TextChangeDataWrapper> -->
+        <attr name="beforeTextChangedCommand" format="reference" />
+        <!--require BindingCommand<TextChangeDataWrapper> -->
+        <attr name="onTextChangedCommand" format="reference" />
+        <!--require BindingCommand<String> -->
+        <attr name="afterTextChangedCommand" format="reference" />
+        <attr name="textChanged" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ImageView">
+        <!--  load bitmap from uri(string type) -->
+        <attr name="url" />
+        <!--width for ResizeOptions (use Fresco to load bitmap). -->
+        <attr name="request_width" format="integer" />
+        <!--height for ResizeOptions (use Fresco to load bitmap). -->
+        <attr name="request_height" format="integer" />
+        <attr name="placeholderRes" format="reference|color" />
+        <!--  require BindingCommand<Bitmap> See {@link @link com.kelin.mvvmlight.command.BindingCommand} -->
+        <attr name="onSuccessCommand" format="reference" />
+        <!--require BindingCommand<CloseableReference<CloseableImage>> See {@link com.kelin.mvvmlight.command.BindingCommand} -->
+        <attr name="onFailureCommand" format="reference" />
+
+    </declare-styleable>
+
+
+    <declare-styleable name="ViewGroup">
+        <!-- require ItemView {@link me.tatarka.bindingcollectionadapter.ItemView} or ItemViewSelector {{@link me.tatarka.bindingcollectionadapter.ItemViewSelector}.} -->
+        <attr name="itemView" />
+        <!-- require List<ViewModel> bind to ItemView to presentation.-->
+        <attr name="observableList" format="reference" />
+
+    </declare-styleable>
+
+    <declare-styleable name="RecyclerView" parent="AdapterView">
+        <attr name="lineManager" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="RadioGroup">
+        <attr name="onCheckedChangedCommand" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="Spinner">
+        <attr name="itemDatas" format="reference" />
+        <attr name="valueReply" format="string" />
+        <attr name="onItemSelectedCommand" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="Switch">
+        <attr name="onCheckedChangeCommand" format="reference" />
+        <attr name="switchState" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ListView" parent="AdapterView">
+        <!--require BindingCommand<Integer> integer mean to position where is clicked! -->
+        <attr name="onItemClickCommand" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ViewPager">
+        <!-- require ItemView {@link me.tatarka.bindingcollectionadapter.ItemView} or ItemViewSelector {{@link me.tatarka.bindingcollectionadapter.ItemViewSelector}.} -->
+        <attr name="itemView" />
+        <!-- require List<ViewModel> bind to ItemView to presentation.-->
+        <attr name="items" />
+        <!-- require a adapter which type of BindingRecyclerViewAdapter<T> to AdapterView-->
+        <attr name="adapter" />
+        <!-- require PageTitles<T>-->
+        <attr name="pageTitles" format="reference" />
+        <!--require BindingCommand<ViewPagerDataWrapper> -->
+        <attr name="onPageScrolledCommand" format="reference" />
+        <!--require BindingCommand<Integer> -->
+        <attr name="onPageSelectedCommand" format="reference" />
+        <!--require BindingCommand<Integer> -->
+        <attr name="onPageScrollStateChangedCommand" format="reference" />
+
+    </declare-styleable>
+
+    <declare-styleable name="NestedScrollView">
+        <!-- require BindingCommand<NestScrollDataWrapper> -->
+        <attr name="onScrollChangeCommand" />
+    </declare-styleable>
+
+    <declare-styleable name="SimpleDraweeView">
+        <!-- require String to load Image"-->
+        <attr name="url" />
+    </declare-styleable>
+
+    <declare-styleable name="ScrollView">
+        <!-- require BindingCommand<ScrollDataWrapper> -->
+        <attr name="onScrollChangeCommand" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeRefreshLayout">
+        <!-- require RelayCommand -->
+        <attr name="onRefreshCommand" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="WebView">
+        <!-- require String render to html show in webview-->
+        <attr name="render" format="string" />
+    </declare-styleable>
+    <!-- 自定义控制事件分发的LinearLayout -->
+    <declare-styleable name="ControlDistributeLinearLayout">
+        <attr name="distribute_event" format="boolean" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="MNPasswordEditText">
+        <!--密码框的颜色-->
+        <attr name="mnPsw_border_color" format="color" />
+        <!--密码框选中的颜色-->
+        <attr name="mnPsw_border_selected_color" format="color" />
+        <!--密码文字的颜色,圆形密码颜色-->
+        <attr name="mnPsw_text_color" format="color" />
+        <!--密码框的圆角-->
+        <attr name="mnPsw_border_radius" format="dimension" />
+        <!--密码框的线的大小-->
+        <attr name="mnPsw_border_width" format="dimension" />
+        <!--密码框的每个间隔,只有样式2才起作用-->
+        <attr name="mnPsw_item_margin" format="dimension" />
+        <!--密码框背景色-->
+        <attr name="mnPsw_background_color" format="color" />
+        <!--密码框输入的模式:4.明文,3.文字,2.图片,1.圆形-->
+        <attr name="mnPsw_mode" format="enum">
+            <!--圆形默认-->
+            <enum name="Circle" value="1" />
+            <!--图片-->
+            <enum name="Bitmap" value="2" />
+            <!--文本-->
+            <enum name="Text" value="3" />
+            <!--原始-->
+            <enum name="OriginalText" value="4" />
+        </attr>
+        <!--密码框样式: 1.连在一起 2.分开单独显示  3.下划线形式-->
+        <attr name="mnPsw_style" format="enum">
+            <!--连在一起-->
+            <enum name="StyleDefault" value="1" />
+            <!--单独-->
+            <enum name="StyleOneself" value="2" />
+            <!--下划线形式-->
+            <enum name="StyleUnderLine" value="3" />
+        </attr>
+        <!--密码文字遮盖-->
+        <attr name="mnPsw_cover_text" format="string" />
+        <!--密码图片遮盖-->
+        <attr name="mnPsw_cover_bitmap_id" format="reference" />
+        <!--密码圆形遮盖颜色-->
+        <attr name="mnPsw_cover_circle_color" format="color" />
+        <!--密码圆形遮盖半径-->
+        <attr name="mnPsw_cover_circle_radius" format="dimension" />
+        <!--密码图片遮盖长宽-->
+        <attr name="mnPsw_cover_bitmap_width" format="dimension" />
+
+    </declare-styleable>
+
+
+
+    <declare-styleable name="WheelPicker">
+        <attr name="wheel_data" format="reference" />
+        <attr name="wheel_selected_item_position" format="integer" />
+        <attr name="wheel_item_text_size" format="dimension" />
+        <attr name="wheel_item_text_color" format="color" />
+        <attr name="wheel_selected_item_text_color" format="color" />
+        <attr name="wheel_same_width" format="boolean" />
+        <attr name="wheel_maximum_width_text" format="string" />
+        <attr name="wheel_maximum_width_text_position" format="integer" />
+        <attr name="wheel_visible_item_count" format="integer" />
+        <attr name="wheel_item_space" format="dimension" />
+        <attr name="wheel_cyclic" format="boolean" />
+        <attr name="wheel_indicator" format="boolean" />
+        <attr name="wheel_indicator_color" format="color" />
+        <attr name="wheel_indicator_size" format="dimension" />
+        <attr name="wheel_curtain" format="boolean" />
+        <attr name="wheel_curtain_color" format="color" />
+        <attr name="wheel_atmospheric" format="boolean" />
+        <attr name="wheel_curved" format="boolean" />
+        <attr name="wheel_item_align" format="enum">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+        <attr name="wheel_font_path" format="string" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ArrowTextView">
+        <attr name="radius" format="dimension" />
+        <attr name="arrowWidth" format="dimension" />
+        <attr name="arrowHeight" format="dimension" />
+        <attr name="bg" format="color" />
+    </declare-styleable>
+
+
+
+    <!-- 柱状图样式属性 -->
+    <declare-styleable name="zqxchart_histogram">
+        <!-- 坐标系颜色 -->
+        <attr name="hCoordinatesColor" format="color"/>
+        <attr name="rectTextColor" format="color"/>
+        <attr name="rectTextSize" format="integer"/>
+        <!-- x轴文字颜色 -->
+        <attr name="hxTextColor" format="color"/>
+        <!-- y轴文字颜色 -->
+        <attr name="hyTextColor" format="color"/>
+        <!-- x轴文字尺寸 -->
+        <attr name="hxTextSize" format="integer"/>
+        <!-- y轴文字尺寸 -->
+        <attr name="hyTextSize" format="integer"/>
+        <!-- x轴刻度点数量 -->
+        <attr name="hxPointCount" format="integer"/>
+        <!-- y轴刻度点数量 -->
+        <attr name="hyPointCount" format="integer"/>
+        <attr name="hanimType">
+            <enum name="NONE" value="-1"></enum>
+            <enum name="TRANSLATE" value="0"></enum>
+            <enum name="ALPHA" value="1"></enum>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="zqxchart_pie">
+        <!-- 间隔角度 -->
+        <attr name="separationDegree" format="integer"/>
+        <!-- 文字颜色 -->
+        <attr name="textSize" format="integer"/>
+        <!-- 文字颜色 -->
+        <attr name="textColor" format="color"/>
+        <attr name="panimType">
+            <enum name="NONE" value="-1"></enum>
+            <!--enum name="TRANSLATE" value="0"></enum-->
+            <enum name="ALPHA" value="1"></enum>
+        </attr>
+    </declare-styleable>
+
+
+</resources>

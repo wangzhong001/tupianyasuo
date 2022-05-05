@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16.67dp"
+        android:layout_marginTop="39.67dp"
+        android:text="专业图片压缩"
+        android:textColor="#ff3d3c3f"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/to_vip"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_16"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_16"
+        android:background="@drawable/go_vip_bg"
+        android:gravity="center"
+        android:text="开通VIP"
+        android:textColor="#ffffffff"
+        android:textSize="11sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_88">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/compression"
+                android:layout_width="@dimen/dp_328"
+                android:layout_height="@dimen/dp_144"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_30"
+                android:background="@drawable/compression_bg">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="图片压缩"
+                        android:textColor="#ffffffff"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_11"
+                        android:text="一键批量压缩"
+                        android:textColor="#99ffffff"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_29"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:background="@drawable/my_go_vip_bg"
+                        android:gravity="center"
+                        android:text="开始制作"
+                        android:textColor="#ff395aff"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/dp_53"
+                    android:layout_height="@dimen/dp_53"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/dp_18"
+                    android:layout_marginBottom="@dimen/dp_18"
+                    android:src="@drawable/compression_icon" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/size"
+                android:layout_width="@dimen/dp_328"
+                android:layout_height="@dimen/dp_144"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/size_bg">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="图片尺寸调整"
+                        android:textColor="#ffffffff"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_11"
+                        android:text="自定义图片尺寸"
+                        android:textColor="#99ffffff"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_29"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:background="@drawable/my_go_vip_bg"
+                        android:gravity="center"
+                        android:text="开始制作"
+                        android:textColor="#FF763D"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/dp_52"
+                    android:layout_height="@dimen/dp_52"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/dp_18"
+                    android:layout_marginBottom="@dimen/dp_18"
+                    android:src="@drawable/size_icon" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/format"
+                android:layout_width="@dimen/dp_328"
+                android:layout_height="@dimen/dp_144"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/format_bg">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="图片格式转换"
+                        android:textColor="#ffffffff"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_11"
+                        android:text="多种格式随意转换"
+                        android:textColor="#99ffffff"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_29"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:background="@drawable/my_go_vip_bg"
+                        android:gravity="center"
+                        android:text="开始制作"
+                        android:textColor="#FFAC16"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/dp_57"
+                    android:layout_height="@dimen/dp_57"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/dp_18"
+                    android:layout_marginBottom="@dimen/dp_18"
+                    android:src="@drawable/format_icon" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/video"
+                android:layout_width="@dimen/dp_328"
+                android:layout_height="@dimen/dp_144"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:background="@drawable/format_bg3">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_13"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="视频压缩"
+                        android:textColor="#ffffffff"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_11"
+                        android:text="自定义视频压缩大小"
+                        android:textColor="#99ffffff"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="@dimen/dp_80"
+                        android:layout_height="@dimen/dp_29"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:background="@drawable/my_go_vip_bg"
+                        android:gravity="center"
+                        android:text="开始制作"
+                        android:textColor="#9216FF"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/dp_58"
+                    android:layout_height="@dimen/dp_55"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="@dimen/dp_18"
+                    android:layout_marginBottom="@dimen/dp_18"
+                    android:src="@drawable/shipin_icon3" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

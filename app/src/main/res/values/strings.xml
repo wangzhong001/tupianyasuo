@@ -1,0 +1,265 @@
+<resources>
+<!--    <string name="app_name">图片编辑压缩</string>-->
+
+    <string name="app_name">相机图片编辑器</string>
+
+    <string name="resource_video_title">剪辑</string>
+    <string name="video_title">所有视频</string>
+    <string name="next">下一步</string>
+    <string name="cut_title">剪辑</string>
+    <string name="delete_node">删除节点</string>
+    <string name="volume">音量</string>
+    <string name="speed">速度</string>
+    <string name="node_start_time">节点起始时间</string>
+    <string name="node_end_time">节点结束时间</string>
+    <string name="audition_title">试听</string>
+    <string name="save">保存</string>
+    <string name="merge">合并</string>
+    <string name="remax_title">混音</string>
+    <string name="configure_video">配置视频</string>
+    <string name="video_resolution">视频分辨率</string>
+    <string name="video_frame_rate">视频帧率</string>
+    <string name="video_bit_rate">视频码率</string>
+    <string name="output_format">输出格式</string>
+    <string name="start_conversion">开始转换</string>
+    <string name="canel">取消</string>
+    <string name="sure">确定</string>
+    <string name="try_listen">试听</string>
+    <string name="pause">暂停</string>
+    <string name="stop_record">点击停止录音</string>
+    <string name="start_record">点击开始录音</string>
+    <string name="again_recoind">继续录音</string>
+    <string name="stop_recoind">暂停录音</string>
+    <string name="reset_record">重新录音</string>
+    <string name="format">格式</string>
+    <string name="sampling_rate">采样率</string>
+    <string name="bit_rate">比特率</string>
+    <string name="fade_in">淡入</string>
+    <string name="fade_out">淡出</string>
+    <string name="hz">Hz</string>
+    <string name="kbps">kbps</string>
+    <string name="back_home">返回首页</string>
+    <string name="right_now_share">立即分享</string>
+    <string name="rename">重命名</string>
+    <string name="open_style">打开方式</string>
+    <string name="share">分享</string>
+    <string name="deletc_iv">删除</string>
+    <string name="user_agreement">用户协议</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="file_path">文件路径</string>
+    <string name="set_ling">设置铃声</string>
+    <string name="ex_music">提取音频</string>
+    <string name="jianji">剪辑</string>
+
+    <string name="dkplayer_replay">重新播放</string>
+    <string name="perfer">让你完美体验视听盛宴</string>
+    <string name="video">视频</string>
+    <string name="scend">s</string>
+
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+    <string name="save_path">文件已保存到:</string>
+    <string name="wenjian_path">文件保存到:</string>
+
+
+
+
+
+
+
+    <string-array name="resource_tablayout_title">
+        <item>媒体库</item>
+        <item>录音</item>
+        <item>剪辑</item>
+        <item>文件</item>
+
+    </string-array>
+    
+    
+    <integer-array name="get_resolution_title">
+        <item>640</item>
+        <item>1600</item>
+        <item>720</item>
+        <item>852</item>
+        <item>960</item>
+        <item>1280</item>
+        <item>1366</item>
+        <item>1920</item>
+    </integer-array>
+
+
+
+    <integer-array name="get_resolution_title_right">
+        <item>480</item>
+        <item>1024</item>
+        <item>480</item>
+        <item>480</item>
+        <item>540</item>
+        <item>720</item>
+        <item>768</item>
+        <item>1080</item>
+    </integer-array>
+
+
+    <!--<string name=""-array name="code_rate_title_">-->
+        <!--<item>默认</item>-->
+        <!--<item>1500kb/s(超清)</item>-->
+        <!--<item>1000kb/s(高清)</item>-->
+        <!--<item>500kb/s(标清)</item>-->
+
+    <!--</s-array>-->
+
+
+    <string-array name="code_rate_title_string">
+        <item>kb/s(高清)</item>
+        <item>kb/s(超清)</item>
+        <item>kb/s(标清)</item>
+
+    </string-array>
+
+    <integer-array name="code_rate_title">
+        <item>1000</item>
+        <item>1500</item>
+        <item>500</item>
+    </integer-array>
+
+
+    <string-array name="format_title">
+        <item>MP4</item>
+        <item>MKV</item>
+        <item>MOV</item>
+        <!--<item>3GP</item>-->
+        <!--<item>AMV</item>-->
+        <item>FLV</item>
+        <!--<item>MPEG</item>-->
+
+    </string-array>
+
+
+    <string-array name="audio_format_title">
+        <item>AAC</item>
+        <item>M4A</item>
+        <item>MP3</item>
+        <item>FLAC</item>
+        <item>WMA</item>
+        <item>WAV</item>
+
+    </string-array>
+
+
+    <string-array name="sampling_rate_title">
+        <item>32000</item>
+        <item>8000</item>
+        <item>11025</item>
+        <item>22050</item>
+        <item>44100</item>
+        <item>48000</item>
+
+    </string-array>
+
+    <string-array name="bit_ate_title">
+        <item>32</item>
+        <item>96</item>
+        <item>128</item>
+        <item>160</item>
+        <item>192</item>
+        <item>224</item>
+        <item>320</item>
+
+    </string-array>
+
+
+    <string-array name="fade_in_title">
+        <item>1s</item>
+        <item>2s</item>
+        <item>3s</item>
+        <item>4s</item>
+        <item>5s</item>
+        <item>关闭</item>
+
+    </string-array>
+
+
+    <string-array name="time_title">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+
+    </string-array>
+
+
+
+    <string-array name="features_tablayout_title">
+        <item>视频</item>
+        <!--<item>音频</item>-->
+
+    </string-array>
+
+    <string-array name="mine_features_tablayout_title">
+        <item>我的视频</item>
+        <item>我的音频</item>
+        <item>我的图片</item>
+
+
+    </string-array>
+
+
+    <string-array name="video_features_title">
+        <item>视频转码</item>
+        <item>获取第一帧</item>
+        <item>抽取视频</item>
+        <item>视频转图片</item>
+        <item>视频转gif</item>
+        <item>图片转视频</item>
+        <item>倒叙播放</item>
+        <item>视频降噪</item>
+        <item>视频缩小一倍</item>
+        <!--<item>倍速播放</item>-->
+    </string-array>
+
+
+    <string-array name="music_features_title">
+        <item>音频转码</item>
+        <item>音视频合成</item>
+        <item>获取第一帧</item>
+        <item>抽取音频</item>
+        <item>音频编码</item>
+        <item>倍速播放</item>
+
+    </string-array>
+
+
+
+    <string name="vip_title">VIP特享功能</string>
+    <string name="click_login">点击登录</string>
+    <string name="unlock_more_featrues">解锁更多功能</string>
+    <string name="vip_string1">订阅套餐</string>
+    <string name="one_year">一年</string>
+    <string name="three_month">三个月</string>
+    <string name="one_month">一个月</string>
+    <string name="every_day_five">每天只要5分钱</string>
+    <string name="every_day_seven">每天只要7分钱</string>
+    <string name="every_day_nine">每天只要9分钱</string>
+    <string name="money_35">￥40.99</string>
+    <string name="money_199">￥199.99</string>
+    <string name="money_8">￥10.99</string>
+    <string name="money_49">￥49.99</string>
+    <string name="money_2">￥4.99</string>
+    <string name="money_19">￥19.99</string>
+    <string name="subscribe_now">立即订阅</string>
+    <string name="vip_privilege">VIP特权</string>
+    <string name="vip_string2">无限使用次数</string>
+    <string name="vip_string3">随时随地,想用就用</string>
+    <string name="vip_string4">解锁更多语音包</string>
+    <string name="vip_string5">各种语音包尽情享用</string>
+    <string name="vip_string6">解锁更多压缩格式</string>
+    <string name="vip_string7">满足你的一切需求</string>
+    <string name="vip_member">VIP会员</string>
+    <string name="suidi">让你随时随地想用就用</string>
+    <string name="remove_ad">移除广告</string>
+    <string name="ad_not">让你免除广告打扰,安心体验功能</string>
+    <string name="input_name">请输入名称</string>
+
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <corners android:radius="@dimen/dp_8"/>
+
+    <!-- 边框 -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/color_3D3C3F" />
+
+    <!-- 形状颜色（如果需要的是空心矩形, 则形状颜色设置为透明） -->
+    <solid android:color="@color/white" />
+</shape>

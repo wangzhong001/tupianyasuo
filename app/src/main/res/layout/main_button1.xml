@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/main_rg"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+
+        <RadioButton
+            android:background="?android:attr/selectableItemBackground"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:id="@+id/mall_rb"
+            style="@style/bottom_tag_style"
+            android:checked="true"
+            android:drawableTop="@drawable/selector_home"
+            android:text="首页" />
+
+
+        <RadioButton
+            android:background="?android:attr/selectableItemBackground"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:id="@+id/shopping_cart_rb"
+            style="@style/bottom_tag_style"
+            android:drawableTop="@drawable/selector_borrowing"
+            android:text="记录"
+            />
+
+
+        <RadioButton
+            android:visibility="gone"
+            android:background="?android:attr/selectableItemBackground"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:id="@+id/vip_rb"
+            style="@style/bottom_tag_style"
+            android:drawableTop="@drawable/selector_vip"
+            android:text="会员"
+            />
+
+
+
+
+        <RadioButton
+            android:background="?android:attr/selectableItemBackground"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:id="@+id/wallet_rb"
+            style="@style/bottom_tag_style"
+            android:drawableTop="@drawable/selector_wallet"
+            android:text="我的" />
+
+
+    </RadioGroup>
+</layout>

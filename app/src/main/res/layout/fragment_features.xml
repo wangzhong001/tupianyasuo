@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:binding="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="baseViewModel"
+            type="com.qihe.imagecompression.viewmodel.FeaturesViewModel" />
+
+        <import type="me.tatarka.bindingcollectionadapter2.LayoutManagers" />
+
+        <import type="com.xinqidian.adcommon.binding.viewadapter.recyclerview.LineManagers" />
+
+
+        <import type="android.view.View"/>
+    </data>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_181B28"
+            android:paddingTop="@dimen/dp_26">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/dp_12"
+                android:text="音频列表"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold" />
+
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_0B0B16">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="@dimen/dp_10"
+                android:visibility="@{baseViewModel.isEmpty?View.GONE:View.VISIBLE}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                binding:adapter="@{baseViewModel.mineFileAdapter}"
+                binding:itemBinding="@{baseViewModel.mineFileItemBinding}"
+                binding:items="@{baseViewModel.mineFileList}"
+                binding:layoutManager="@{LayoutManagers.linear()}"
+                binding:lineManager="@{LineManagers.vertical()}" />
+
+            <LinearLayout
+                android:visibility="@{baseViewModel.isEmpty?View.VISIBLE:View.GONE}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/wrong_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="尚未有转换的文件~"
+                    android:textColor="@color/color_BCBEC2"
+                    android:textSize="@dimen/sp_14" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

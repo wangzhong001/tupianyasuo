@@ -1,0 +1,307 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword 'a12345678'
+            storeFile file('./music.jks')
+            storePassword 'a12345678'
+        }
+    }
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+    packagingOptions {
+        pickFirst 'lib/armeabi-v7a/libijkplayer.so'
+        pickFirst 'lib/armeabi-v7a/libijkffmpeg.so'
+        pickFirst 'lib/armeabi-v7a/libijksdl.so'
+
+    }
+    defaultConfig {
+        applicationId "com.qihe.imagecompression"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 9
+        versionName "1.0.9"
+        multiDexEnabled true
+        //flavorDimensions "versionCode"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //目前已支持 "armeabi-v7a","arm64-v8a","x86","x86_64" 平台架构
+            abiFilters "arm64-v8a", "armeabi-v7a"
+//            abiFilters "arm64-v8a"
+        //    abiFilters "armeabi-v7a"
+       //     abiFilters "armeabi", "armeabi-v7a"
+        }
+
+       // defaultPublishConfig 'release'
+        //publishNonDefault true
+
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            output.outputFile = new File(output.outputFile.parent, "图片压缩-" + buildType.name + "-v" + defaultConfig.versionName  + ".apk" );
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+    repositories {
+        maven { url "https://jitpack.io" }
+
+        maven {
+            url 'https://repo.spring.io/libs-snapshot'
+        }
+        maven { url "https://maven.google.com" }
+        maven { url "https://dl.google.com/dl/android/maven2/" }
+    }
+    dataBinding {
+        enabled = true
+    }
+    /*buildFeatures{
+        dataBinding = true
+        // for view binding :
+        // viewBinding = true
+    }*/
+    sourceSets {
+        debug {
+            java.srcDirs = ['src/main/java', 'src/debug/java']
+        }
+        release {
+            java.srcDirs = ['src/main/java', 'src/release/java']
+        }
+    }
+
+    /*compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }*/
+
+
+    //增量编译
+   /* dexOptions {
+       // incremental true
+        preDexLibraries = true
+        javaMaxHeapSize "4g"
+
+
+    }*/
+    /** 引用腾讯广告的aar文件,此段代码必须这样**/
+    repositories {
+        flatDir {
+            dirs 'libs', '../adcommon/src/tencent/libs'
+            dirs 'libs', '../adcommon/src/chuanshanjia/libs'
+
+        }
+    }
+    productFlavors {
+
+
+        xiaomi { //小米
+            buildConfigField "boolean", "IS_SHOW_BANNER_AD", "true" //是否显示横幅广告
+            buildConfigField "boolean", "IS_SHOW_SPLASH_AD", "false" //是否显示开屏广告
+            buildConfigField "boolean", "IS_SHOW_NATIVE_AD", "true" //是否显示原生广告
+            buildConfigField "boolean", "IS_SHOW_VERTICALINTERSTITIAL_AD", "true" //是否显示插屏广告
+            buildConfigField "boolean", "IS_SHOW_STIMULATE_AD", "true" //是否显示激励视频广告
+
+
+        }
+
+
+        chuanshanjia { //穿山甲
+            buildConfigField "boolean", "IS_SHOW_BANNER_AD", "true" //是否显示横幅广告
+            buildConfigField "boolean", "IS_SHOW_SPLASH_AD", "true" //是否显示开屏广告
+            buildConfigField "boolean", "IS_SHOW_NATIVE_AD", "true" //是否显示原生广告
+            buildConfigField "boolean", "IS_SHOW_VERTICALINTERSTITIAL_AD", "true" //是否显示插屏广告
+            buildConfigField "boolean", "IS_SHOW_STIMULATE_AD", "true" //是否显示激励视频广告
+            buildConfigField "boolean", "IS_NEED_COMFIRMED", "false" //是否提示下载
+
+
+        }
+
+
+        tencent { //腾讯
+            buildConfigField "boolean", "IS_SHOW_BANNER_AD", "true" //是否显示横幅广告
+            buildConfigField "boolean", "IS_SHOW_SPLASH_AD", "true" //是否显示开屏广告
+            buildConfigField "boolean", "IS_SHOW_NATIVE_AD", "true" //是否显示原生广告
+            buildConfigField "boolean", "IS_SHOW_VERTICALINTERSTITIAL_AD", "true" //是否显示插屏广告
+            buildConfigField "boolean", "IS_SHOW_STIMULATE_AD", "true" //是否显示激励视频广告
+
+
+        }
+
+
+        noad { //无广告
+            buildConfigField "boolean", "IS_SHOW_BANNER_AD", "false" //是否显示横幅广告
+            buildConfigField "boolean", "IS_SHOW_SPLASH_AD", "false" //是否显示开屏广告
+            buildConfigField "boolean", "IS_SHOW_NATIVE_AD", "false" //是否显示原生广告
+            buildConfigField "boolean", "IS_SHOW_VERTICALINTERSTITIAL_AD", "false" //是否显示插屏广告
+            buildConfigField "boolean", "IS_SHOW_STIMULATE_AD", "false" //是否显示激励视频广告
+
+
+        }
+
+
+        remixad { //腾讯穿山甲混合广告
+            buildConfigField "boolean", "IS_SHOW_BANNER_AD", "false" //是否显示横幅广告
+            buildConfigField "boolean", "IS_SHOW_SPLASH_AD", "true" //是否显示开屏广告
+            buildConfigField "boolean", "IS_SHOW_NATIVE_AD", "false" //是否显示原生广告
+            buildConfigField "boolean", "IS_SHOW_VERTICALINTERSTITIAL_AD", "false" //是否显示插屏广告
+            buildConfigField "boolean", "IS_SHOW_STIMULATE_AD", "false" //是否显示激励视频广告
+
+
+        }
+
+
+        productFlavors.all {
+            flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+    }
+}
+
+repositories {
+    maven {
+        url 'https://repo.spring.io/libs-snapshot'
+    }
+
+    maven { url "https://maven.google.com" }
+    maven { url "https://dl.google.com/dl/android/maven2/" }
+}
+
+configurations {
+
+    //小米平台编译
+    xiaomiDebugCompile //Debug模式
+    xiaomiReleaseCompile //Release模式
+
+    //腾讯平台编译
+    tencentDebugCompile //Debug模式
+    tencentReleaseCompile //Release模式
+
+
+    //无广告平台编译
+    noadDebugCompile //Debug模式
+    noadReleaseCompile //Release模式
+
+
+    //穿山甲平台编译
+    chuanshanjiaDebugCompile//Debug模式
+    chuanshanjiaReleaseCompile //Release模式
+
+
+    //混合平台编译
+    remixadDebugCompile //Debug模式
+    remixadReleaseCompile //Release模式
+
+
+}
+
+
+dependencies {
+
+   // debugImplementation project(path: ':adcommon', configuration: "debug")
+   // releaseImplementation project(path: ':adcommon', configuration: "release")
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:appcompat-v7:28.0.0'
+    compile 'com.android.support:support-v4:28.0.0'
+    testCompile 'junit:junit:4.12'
+    //小米平台关联编译
+    xiaomiDebugCompile project(path: ':adcommon', configuration: 'xiaomiDebug')
+    xiaomiReleaseCompile project(path: ':adcommon', configuration: 'xiaomiRelease')
+    //腾讯平台编译
+    tencentDebugCompile project(path: ':adcommon', configuration: 'tencentDebug')
+   tencentReleaseCompile project(path: ':adcommon', configuration: 'tencentRelease')
+    //穿山甲平台编译
+    chuanshanjiaDebugCompile project(path: ':adcommon', configuration: 'chuanshanjiaDebug')
+    chuanshanjiaReleaseCompile project(path: ':adcommon', configuration: 'chuanshanjiaRelease')
+    //无广告平台编译
+    noadDebugCompile project(path: ':adcommon', configuration: 'noadDebug')
+    noadReleaseCompile project(path: ':adcommon', configuration: 'noadRelease')
+
+    //混合平台编译
+    remixadDebugCompile project(path: ':adcommon', configuration: 'remixadDebug')
+    remixadReleaseCompile project(path: ':adcommon', configuration: 'remixadRelease')
+    compile project(':adcommon')
+//    implementation project(path: ':adcommon', configuration: 'default')
+  //  implementation project(path: ':adcommon', configuration: 'default')
+    //    compile 'com.android.support:design:27.0.2'
+    //    compile 'com.androidkun:XTabLayout:1.1.3'
+    compile 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.2.0'
+    compile 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:2.2.0'
+    compile 'com.alibaba:arouter-api:1.3.1'
+    // arouter-compiler 的注解依赖需要所有使用 ARouter 的 model 都添加依赖
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
+    compile 'com.belerweb:pinyin4j:2.5.0'
+    compile project(':rxffmpeg')
+    compile 'com.google.code.gson:gson:2.8.2'
+    /** glide图片加载    **/
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //
+    //    compile 'com.github.jiangdongguo:Lame4Mp3:v1.0.0'
+    //
+    //    compile 'com.github.zhaolewei:ZlwAudioRecorder:v1.07'
+    /** 视频播放   **/
+    //    compile 'com.github.xiaoyanger0825:NiceVieoPlayer:v2.2'
+    compile 'com.github.dueeeke.dkplayer:dkplayer-java:2.5.3'
+    compile 'com.github.dueeeke.dkplayer:dkplayer-armv7a:2.5.3'
+    compile 'com.github.dueeeke.dkplayer:dkplayer-arm64:2.5.3'
+    compile 'com.dou361.ijkplayer:jjdxm-ijkplayer:1.0.6'
+    /** 权限   **/
+   // compile 'com.github.DevlinChiu:FloatWindowPermission:1.1'
+    compile 'me.jessyan:autosize:1.2.1'
+    //分享
+    compile 'gdut.bsx:share2:0.9.3'
+    compile files('libs/mid-sdk-3.73.jar')
+
+    compile 'com.github.xuexiangjys:XUpdate:1.1.6'
+    compile 'com.lzy.net:okgo:3.0.4'
+
+    compile 'org.greenrobot:eventbus:3.1.1'
+
+    //图片压缩
+    compile 'com.github.nanchen2251:CompressHelper:1.0.5'
+
+    compile project(':video-compressor')
+
+    // 友盟统计SDK
+    // compile "com.umeng.umsdk:common:9.1.0"// （必选）
+    compile files('libs/umeng-common-9.3.8.jar')
+    //compile "com.umeng.umsdk:asms:1.1.3" // asms包依赖(必选)
+    compile(name:'umeng-asms-armeabi-v1.2.2', ext:'aar')
+    //compile 'com.umeng.umsdk:crash:0.0.4' // native crash包依赖(必选)
+    //compile  'com.umeng.umsdk:share-core:7.1.4'//必选
+
+   // compile  'com.umeng.umsdk:share-wx:7.1.4'
+
+
+
+    //bugly
+    compile 'com.tencent.bugly:crashreport:2.1.9' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    compile 'com.tencent.bugly:nativecrashreport:3.0' //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
+
+    compile  'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.6.5'//微信官方SDK依赖库
+
+   // compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:1.0.2'
+
+
+}

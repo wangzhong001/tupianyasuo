@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:binding="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="baseViewModel"
+            type="com.qihe.imagecompression.viewmodel.MianViewModel"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.qihe.imagecompression.MainActivity">
+
+
+
+
+
+
+        <com.qihe.imagecompression.view.NoScrollViewPager
+            android:id="@+id/main_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/banner_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+
+        <include
+            android:id="@+id/button_ll"
+            layout="@layout/main_button1" />
+
+
+
+
+
+        <!--<TextView-->
+            <!--android:layout_marginLeft="@dimen/dp_18"-->
+            <!--android:layout_marginTop="@dimen/dp_60"-->
+            <!--android:text="HI!早上好"-->
+            <!--android:textSize="@dimen/sp_24"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<TextView-->
+            <!--android:layout_marginTop="@dimen/dp_5"-->
+            <!--android:layout_marginLeft="@dimen/dp_18"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="@dimen/sp_16"-->
+            <!--android:text="欢迎来到格式转换工厂"/>-->
+
+
+
+        <!--<RelativeLayout-->
+            <!--android:layout_marginTop="@dimen/dp_150"-->
+            <!--android:layout_marginLeft="@dimen/dp_15"-->
+            <!--android:layout_marginRight="@dimen/dp_15"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<ImageView-->
+                <!--android:scaleType="centerCrop"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/geshi_bg"/>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_marginLeft="@dimen/dp_18"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:orientation="vertical">-->
+                <!--<TextView-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="@dimen/sp_20"-->
+                    <!--android:text="格式转换"-->
+                    <!--android:textColor="@color/color_008487"/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/textView"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="@dimen/dp_4"-->
+                    <!--android:text="所有视频格式都可转换"-->
+                    <!--android:textColor="@color/color_008487"-->
+                    <!--android:textSize="@dimen/sp_13" />-->
+            <!--</LinearLayout>-->
+        <!--</RelativeLayout>-->
+
+
+        <!--<LinearLayout-->
+            <!--android:layout_marginTop="@dimen/dp_10"-->
+            <!--android:layout_marginLeft="@dimen/dp_15"-->
+            <!--android:layout_marginRight="@dimen/dp_15"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<RelativeLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:src="@drawable/yinpin_bg"/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/one_tv"-->
+                    <!--android:textColor="@color/color_EF4C00"-->
+                    <!--android:layout_marginTop="@dimen/dp_18"-->
+                    <!--android:layout_marginLeft="@dimen/dp_18"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="视频转音频"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textSize="@dimen/sp_20"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_below="@id/one_tv"-->
+                    <!--android:textColor="@color/color_EF4C00"-->
+                    <!--android:layout_marginTop="@dimen/dp_4"-->
+                    <!--android:layout_marginLeft="@dimen/dp_18"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="视频转音频"-->
+                    <!--android:textSize="@dimen/sp_13"/>-->
+
+            <!--</RelativeLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_marginLeft="@dimen/dp_10"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:orientation="vertical"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1">-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:src="@drawable/yasuo_icon"-->
+                        <!--android:layout_height="wrap_content" />-->
+
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/two_tv"-->
+                        <!--android:textColor="@color/color_EF4C00"-->
+                        <!--android:layout_marginTop="@dimen/dp_22"-->
+                        <!--android:layout_marginLeft="@dimen/dp_18"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="视频压缩"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textSize="@dimen/sp_14"/>-->
+
+                    <!--<TextView-->
+                        <!--android:layout_below="@id/two_tv"-->
+                        <!--android:textColor="@color/color_EF4C00"-->
+                        <!--android:layout_marginTop="@dimen/dp_5"-->
+                        <!--android:layout_marginLeft="@dimen/dp_18"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="能将视频的大小进行压缩"-->
+                        <!--android:textSize="@dimen/sp_13"/>-->
+
+                <!--</RelativeLayout>-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_marginTop="@dimen/dp_10"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:src="@drawable/peiyin_icon"-->
+                        <!--android:scaleType="fitXY"-->
+                        <!--android:layout_height="wrap_content" />-->
+
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/there_tv"-->
+                        <!--android:textColor="@color/color_EF4C00"-->
+                        <!--android:layout_marginTop="@dimen/dp_22"-->
+                        <!--android:layout_marginLeft="@dimen/dp_18"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="视频压缩"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textSize="@dimen/sp_14"/>-->
+
+                    <!--<TextView-->
+                        <!--android:layout_below="@id/there_tv"-->
+                        <!--android:textColor="@color/color_EF4C00"-->
+                        <!--android:layout_marginTop="@dimen/dp_5"-->
+                        <!--android:layout_marginLeft="@dimen/dp_18"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="能将视频的大小进行压缩"-->
+                        <!--android:textSize="@dimen/sp_13"/>-->
+
+                <!--</RelativeLayout>-->
+
+
+
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;binding:onClickCommand="@{baseViewModel.audioCut}"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/jianji"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="@dimen/dp_40"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="音频裁剪"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintLeft_toLeftOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintRight_toRightOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;binding:onClickCommand="@{baseViewModel.audioMerge}"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/video_tv"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="@dimen/dp_40"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="音频合并"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintLeft_toLeftOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintRight_toRightOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;binding:onClickCommand="@{baseViewModel.audioExtraction}"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="@dimen/dp_40"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="音频提取"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintLeft_toLeftOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintRight_toRightOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;binding:onClickCommand="@{baseViewModel.audioRemix}"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="@dimen/dp_40"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="混音"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintLeft_toLeftOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintRight_toRightOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;binding:onClickCommand="@{baseViewModel.formatConversion}"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="@dimen/dp_40"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="格式转化"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintLeft_toLeftOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintRight_toRightOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;binding:onClickCommand="@{baseViewModel.stereo}"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="@dimen/dp_40"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="立体声"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintLeft_toLeftOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintRight_toRightOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;binding:onClickCommand="@{baseViewModel.myAudio}"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="@dimen/dp_40"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="我的音频"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintLeft_toLeftOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintRight_toRightOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;binding:onClickCommand="@{baseViewModel.variableSpeed}"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="@dimen/dp_40"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="变调变速"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintLeft_toLeftOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintRight_toRightOf="parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+    </LinearLayout>
+</layout>

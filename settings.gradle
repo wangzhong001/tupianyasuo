@@ -1,0 +1,2 @@
+include ':app', ':rxffmpeg', ':adcommon',':video-compressor'
+//project(':adcommon').projectDir = new File("D:\\NewProject\\image_compression\\image_compression\\app")

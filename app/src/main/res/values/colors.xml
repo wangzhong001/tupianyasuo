@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF5134</color>
+    
+    
+    <color name="color_EEEEEE">#EEEEEE</color>
+    <color name="color_F5F5F5">#F5F5F5</color>
+    <color name="color_FF5134">#FF5134</color>
+    <color name="color_FFFFFF">#FFFFFF</color>
+    <color name="color_808080">#808080</color>
+    <color name="color_E4E4E5">#E4E4E5</color>
+
+    <color name="color_292925">#292925</color>
+
+
+    <color name="white">#FFFFFF</color>
+
+
+    <color name="transparent">#00000000</color> <!-- 透明色-->
+    <color name="transparent_70">#B3000000</color>  <!-- 透明色 70%-->
+    <color name="transparent_60">#99000000</color>  <!-- 透明色 60%-->
+    <color name="transparent_55">#8C000000</color>  <!-- 透明色 55%-->
+    <color name="transparent_50">#80000000</color>  <!-- 透明色 50%-->
+    <color name="transparent_40">#66000000</color>  <!-- 透明色 40%-->
+    <color name="transparent_30">#4D000000</color>  <!-- 透明色 30%-->
+    <color name="transparent_20">#33000000</color>  <!-- 透明色 20%-->
+    <color name="transparent_10">#1A000000</color>  <!-- 透明色 10%-->
+    <color name="transparent_05">#0D000000</color>  <!-- 透明色 5%-->
+    <!--音频裁剪颜色-->
+    <color name="audio_edit_bg">#28243A</color>
+    <color name="audio_edit_view_bg">#47456D</color>
+    <color name="audio_edit_stroke_color">#1C9C20</color>
+    <color name="audio_edit_music_color">#4FCE95</color>
+    <color name="font_gray">#999999</color>
+
+    <color name="color_323232">#323232</color>
+    <color name="color_00B8BE">#00B8BE</color>
+    <color name="color_00D5C0">#00D5C0</color>
+    <color name="color_008487">#008487</color>
+    <color name="color_EF4C00">#EF4C00</color>
+    <color name="color_BCBEC2">#BCBEC2</color>
+    <color name="color_CCCCCC">#CCCCCC</color>
+    <color name="color_000000">#000000</color>
+    <color name="color_101010">#101010</color>
+    <color name="color_181818">#181818</color>
+    <color name="color_FAFAFA">#FAFAFA</color>
+    <color name="color_18C0C4">#18C0C4</color>
+    <color name="color_888888">#888888</color>
+    <color name="color_010101">#010101</color>
+    <color name="color_3ADECE">#3ADECE</color>
+    <color name="color_E5EDE4">#E5EDE4</color>
+    <color name="color_FFB98D">#FFB98D</color>
+    <color name="color_7B7B7B">#7B7B7B</color>
+    <color name="color_555555">#555555</color>
+    <color name="color_C5C5C5">#C5C5C5</color>
+    <color name="color_3D3C3F">#3D3C3F</color>
+    <color name="color_FF3C00">#FF3C00</color>
+    <color name="color_F26A13">#F26A13</color>
+    <color name="color_7F7F7F">#7F7F7F</color>
+    <color name="color_FF3333">#FF3333</color>
+    <color name="color_2F3238">#2F3238</color>
+
+
+    <color name="dkplayer_theme_color">#39C5BB</color>
+    <color name="dkplayer_theme_color_translucent">#9939C5BB</color>
+    <color name="dkplayer_background_color">#96000000</color>
+    <color name="music_bg">#091013</color>
+    <color name="edit_bg">#fff5f5f5</color>
+    <color name="color_475DFC">#475DFC</color>
+    <color name="color_4B7CF8">#4B7CF8</color>
+
+
+
+    <color name="color_A5A5A5">#A5A5A5</color>
+    <color name="color_E5E5E5">#E5E5E5</color>
+    <color name="color_F9E7CB">#F9E7CB</color>
+    <color name="color_766E60">#766E60</color>
+    <color name="color_47321C">#47321C</color>
+    <color name="color_564745">#564745</color>
+    <color name="color_E6C5AF">#E6C5AF</color>
+    <color name="color_4168FD">#4168FD</color>
+    <color name="color_002bd4">#002bd4</color>
+    <color name="color_E8CE90">#E8CE90</color>
+    <color name="main_button_text_select">#4B9CF2</color>
+    <color name="color_FF9000">#FF9000</color>
+    <color name="color_002F37">#002F37</color>
+    <color name="color_85A7A1">#85A7A1</color>
+    <color name="color_181B28">#181B28</color>
+    <color name="color_0B0B16">#0B0B16</color>
+    <color name="color_090F0F">#090F0F</color>
+    <color name="color_DBDBDB">#DBDBDB</color>
+    <color name="color_0751FF">#0751FF</color>
+    <color name="color_1296DB">#1296DB</color>
+    <color name="color_3C3E4B">#3C3E4B</color>
+
+
+
+</resources>
